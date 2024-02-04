@@ -3,4 +3,146 @@
    uuid = "8EE9D02F-7989-46D6-88D0-F6F7394B1AED"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "94F5BD3D-BF8E-4D54-8E74-5696504C3933"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BMICalculator/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C7776811-E2F3-43AB-9858-637567D32074"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BMICalculator/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5"
+            endingLineNumber = "5"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5057E159-F20E-4EE8-92F3-57029FD04658"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BMICalculator/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5057E159-F20E-4EE8-92F3-57029FD04658 - 8c14468b1d93997"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BMICalculator.ViewController.bmiLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "BMICalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emioiso/Desktop/Storyboard/BMICalculator/BMICalculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "5057E159-F20E-4EE8-92F3-57029FD04658 - 49f55b462fa2cdeb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BMICalculator.ViewController.bmiLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "BMICalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emioiso/Desktop/Storyboard/BMICalculator/BMICalculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "5057E159-F20E-4EE8-92F3-57029FD04658 - ba46b0fd4b3a8537"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BMICalculator.ViewController.bmiLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "BMICalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emioiso/Desktop/Storyboard/BMICalculator/BMICalculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "5057E159-F20E-4EE8-92F3-57029FD04658 - 924b3ea9083b4923"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BMICalculator.ViewController.bmiLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "BMICalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emioiso/Desktop/Storyboard/BMICalculator/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "5057E159-F20E-4EE8-92F3-57029FD04658 - 51b2b0e8b3a5fe99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BMICalculator.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BMICalculator.ViewController"
+                  moduleName = "BMICalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emioiso/Desktop/Storyboard/BMICalculator/BMICalculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "5057E159-F20E-4EE8-92F3-57029FD04658 - d330a59b6b5e0fde"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BMICalculator.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BMICalculator.ViewController&gt;"
+                  moduleName = "BMICalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emioiso/Desktop/Storyboard/BMICalculator/BMICalculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

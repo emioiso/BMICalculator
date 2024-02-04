@@ -11,7 +11,10 @@ class ViewController: UIViewController {
     @IBOutlet var heightTextField: UITextField!
     @IBOutlet var weightTextField: UITextField!
     @IBOutlet var bmiLabel: UILabel!
-    @IBOutlet var resultBMI: UILabel!
+    @IBOutlet var judgement: UILabel!
+    
+    
+    
     
     
     override func viewDidLoad() {
@@ -26,10 +29,11 @@ class ViewController: UIViewController {
         let doubleW = Double(weightTextField.text!)
         bmiLabel.text = calculation(height: doubleH!, weight: doubleW!)
     
-        //ここがわからなかった
+        //BMIの計算結果をresultに代入
         let result = calculation(height: doubleH!, weight: doubleW!)
         //ここもわからなかった
         // BMIの計算結果をもとに肥満度を判定
+        //setObesityLevelの関数にresultの数値を使いたいから引数にresultを指定する。
         setObesityLevel(bmi: result)
     }
    
@@ -44,23 +48,24 @@ class ViewController: UIViewController {
     
     //BMIの数値によって肥満度を出力する
     func setObesityLevel(bmi: String) {
+        
         if let bmiValue = Double(bmi) {
             if bmiValue < 18.5 {
-                resultBMI.text = "低体重"
+                judgement.text = "低体重"
             } else if bmiValue < 25 {
-                resultBMI.text = "普通体重"
+                judgement.text = "普通体重"
             } else if bmiValue < 30 {
-                resultBMI.text = "肥満（1度）"
+                judgement.text = "肥満（1度）"
             } else if bmiValue < 35 {
-                resultBMI.text = "肥満（2度）"
+                judgement.text = "肥満（2度）"
             } else if bmiValue < 40 {
-                resultBMI.text = "肥満（3度）"
+                judgement.text = "肥満（3度）"
             } else {
-                resultBMI.text = "肥満（4度）"
+                judgement.text = "肥満（4度）"
             }
         } else {
             // エラーハンドリング: BMIが数値に変換できない場合
-            resultBMI.text = "BMIの計算エラー"
+            judgement.text = "BMIの計算エラー"
         }
     }
 }
