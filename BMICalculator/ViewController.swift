@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController {
     @IBOutlet var heightTextField: UITextField!
@@ -14,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var judgement: UILabel!
     
     
-    
+    var bannerView:GADBannerView!
     
     
     override func viewDidLoad() {
@@ -22,6 +23,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         heightTextField.placeholder = "身長をcmで入力してください。"
         weightTextField.placeholder = "体重をkgで入力してください。"
+        
+        bannerView = GADBannerView(adSize: GADAdSizeBanner)
+        bannerView.adUnitID = "ca-app-pub-7923877881339580/7040716720"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        addBannerViewToView(bannerView)
     }
     
     @IBAction func calculationBtnAction(_ sender: Any) {
@@ -68,5 +75,26 @@ class ViewController: UIViewController {
             judgement.text = "BMIの計算エラー"
         }
     }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView){
+            bannerView.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(bannerView)
+            view.addConstraints(
+                [NSLayoutConstraint(item: bannerView,
+                                    attribute: .bottom,
+                                    relatedBy: .equal,
+                                    toItem: view.safeAreaLayoutGuide,
+                                    attribute: .bottom,
+                                    multiplier: 1,
+                                    constant: 0),
+                 NSLayoutConstraint(item: bannerView,
+                                    attribute: .centerX,
+                                    relatedBy: .equal,
+                                    toItem: view,
+                                    attribute: .centerX,
+                                    multiplier: 1,
+                                    constant: 0)
+                ])
+        }
 }
 
