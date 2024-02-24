@@ -13,16 +13,19 @@ class ViewController: UIViewController {
     @IBOutlet var weightTextField: UITextField!
     @IBOutlet var bmiLabel: UILabel!
     @IBOutlet var judgement: UILabel!
-    
-    
+
     var bannerView:GADBannerView!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
         // Do any additional setup after loading the view.
         heightTextField.placeholder = "身長をcmで入力してください。"
         weightTextField.placeholder = "体重をkgで入力してください。"
+        
         
         bannerView = GADBannerView(adSize: GADAdSizeBanner)
         bannerView.adUnitID = "ca-app-pub-7923877881339580/7040716720"
@@ -95,6 +98,12 @@ class ViewController: UIViewController {
                                     multiplier: 1,
                                     constant: 0)
                 ])
+        }
+   
+    
+//    NumberPadを閉じる処理
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            view.endEditing(true)
         }
 }
 
