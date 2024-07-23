@@ -13,16 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet var weightTextField: UITextField!
     @IBOutlet var bmiLabel: UILabel!
     @IBOutlet var judgement: UILabel!
+    @IBOutlet var ErrorMessageWeight: UILabel!
 
     var bannerView:GADBannerView!
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        // Do any additional setup after loading the view.
         heightTextField.placeholder = "身長をcmで入力してください。"
         weightTextField.placeholder = "体重をkgで入力してください。"
         
@@ -35,16 +32,28 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculationBtnAction(_ sender: Any) {
-        let doubleH = Double(heightTextField.text!)
-        let doubleW = Double(weightTextField.text!)
-        bmiLabel.text = calculation(height: doubleH!, weight: doubleW!)
-    
-        //BMIの計算結果をresultに代入
-        let result = calculation(height: doubleH!, weight: doubleW!)
-        //ここもわからなかった
-        // BMIの計算結果をもとに肥満度を判定
-        //setObesityLevelの関数にresultの数値を使いたいから引数にresultを指定する。
-        setObesityLevel(bmi: result)
+        
+        guard let heightText = heightTextField.text, !heightText.isEmpty,
+              let weightText = weightTextField.text, !weightText.isEmpty,
+              let doubleH = Double(heightText), let doubleW = Double(weightText) else {
+            // ここでエラーメッセージを表示
+            ErrorMessageWeight.text = "体重の数値を入力してください。"
+                return
+            }
+
+            let result = calculation(height: doubleH, weight: doubleW)
+            bmiLabel.text = result
+            setObesityLevel(bmi: result)
+//        let doubleH = Double(heightTextField.text!)
+//        let doubleW = Double(weightTextField.text!)
+//        bmiLabel.text = calculation(height: doubleH!, weight: doubleW!)
+//
+//        //BMIの計算結果をresultに代入
+//        let result = calculation(height: doubleH!, weight: doubleW!)
+//        //ここもわからなかった
+//        // BMIの計算結果をもとに肥満度を判定
+//        //setObesityLevelの関数にresultの数値を使いたいから引数にresultを指定する。
+//        setObesityLevel(bmi: result)
     }
    
     //BMIの計算をしている
