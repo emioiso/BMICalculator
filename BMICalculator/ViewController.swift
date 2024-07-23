@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet var judgement: UILabel!
     @IBOutlet var ErrorMessageWeight: UILabel!
     @IBOutlet var ErrorMessageHeight: UILabel!
-    @IBOutlet var ErrorMessageHeightAndWeight: UILabel!
 
     var bannerView:GADBannerView!
         
@@ -34,39 +33,45 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculationBtnAction(_ sender: Any) {
-        guard let heightText = heightTextField.text, !heightText.isEmpty, let doubleH = Double(heightText) else {
-                ErrorMessageHeight.text = "身長の数値を入力してください。"
-                bmiLabel.text = "" // BMIラベルをクリア
-                judgement.text = "" // 判定ラベルをクリア
-                return
-            }
+        // 各入力が空かどうかを個別にチェック
+           let heightText = heightTextField.text ?? ""
+           let weightText = weightTextField.text ?? ""
 
-            // 体重のチェック
-            guard let weightText = weightTextField.text, !weightText.isEmpty, let doubleW = Double(weightText) else {
-                ErrorMessageWeight.text = "体重の数値を入力してください。"
-                // BMIラベルをクリア
-                bmiLabel.text = ""
-                judgement.text = "" // 判定ラベルをクリア
-                return
-            }
+           var hasErrors = false
 
-            // すべての入力が適切であればBMIを計算し、結果を表示
-            ErrorMessageHeight.text = "" // エラーメッセージをクリア
-            ErrorMessageWeight.text = "" // エラーメッセージをクリア
-            let result = calculation(height: doubleH, weight: doubleW)
-            bmiLabel.text = result
-            setObesityLevel(bmi: result)
-//        guard let heightText = heightTextField.text, !heightText.isEmpty,
-//              let weightText = weightTextField.text, !weightText.isEmpty,
-//              let doubleH = Double(heightText), let doubleW = Double(weightText) else {
-//            // ここでエラーメッセージを表示
-//            ErrorMessageWeight.text = "体重の数値を入力してください。"
-//                return
-//            }
-//
-//            let result = calculation(height: doubleH, weight: doubleW)
-//            bmiLabel.text = result
-//            setObesityLevel(bmi: result)
+           if heightText.isEmpty {
+               ErrorMessageHeight.text = "身長の数値を入力してください。"
+               hasErrors = true
+           } else {
+               ErrorMessageHeight.text = ""  // エラーメッセージをクリア
+           }
+
+           if weightText.isEmpty {
+               ErrorMessageWeight.text = "体重の数値を入力してください。"
+               hasErrors = true
+           } else {
+               ErrorMessageWeight.text = ""  // エラーメッセージをクリア
+           }
+
+           if hasErrors {
+               bmiLabel.text = ""           // BMIラベルをクリア
+               judgement.text = ""          // 判定ラベルをクリア
+//               ErrorMessageHeightAndWeight.text = ""
+               return
+           }
+
+           // 数値変換を試みる
+           if let doubleH = Double(heightText), let doubleW = Double(weightText) {
+               // すべての入力が適切であればBMIを計算し、結果を表示
+               let result = calculation(height: doubleH, weight: doubleW)
+               bmiLabel.text = result
+               setObesityLevel(bmi: result)
+//               ErrorMessageHeightAndWeight.text = ""   共通のエラーメッセージをクリア
+           } else {
+               bmiLabel.text = "入力値が不正です"  // 数値変換に失敗した場合のエラー
+               judgement.text = ""
+           }
+
     }
    
     //BMIの計算をしている
