@@ -88,17 +88,17 @@ class WHOViewController: UIViewController {
         
         if let bmiValue = Double(bmi) {
             if bmiValue < 18.5 {
-                WHOjudgement.text = "低体重"
+                WHOjudgement.text = "Underweight"
             } else if bmiValue < 25 {
-                WHOjudgement.text = "普通体重"
+                WHOjudgement.text = "Normal range"
             } else if bmiValue < 30 {
-                WHOjudgement.text = "肥満（1度）"
+                WHOjudgement.text = "Pre-obese"
             } else if bmiValue < 35 {
-                WHOjudgement.text = "肥満（2度）"
+                WHOjudgement.text = "Obese class I"
             } else if bmiValue < 40 {
-                WHOjudgement.text = "肥満（3度）"
+                WHOjudgement.text = "Obese class II"
             } else {
-                WHOjudgement.text = "肥満（4度）"
+                WHOjudgement.text = "Obese class III"
             }
         } else {
             // エラーハンドリング: BMIが数値に変換できない場合
