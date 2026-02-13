@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852438EB2F3EB63F004FB083 /* WHOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852438EA2F3EB63F004FB083 /* WHOViewController.swift */; };
 		85D172952B6B730D0071CDC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D172942B6B730D0071CDC9 /* AppDelegate.swift */; };
 		85D172972B6B730D0071CDC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D172962B6B730D0071CDC9 /* SceneDelegate.swift */; };
 		85D172992B6B730D0071CDC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D172982B6B730D0071CDC9 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		04DB136693346617C1BCACF1 /* Pods-BMICalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMICalculator.release.xcconfig"; path = "Target Support Files/Pods-BMICalculator/Pods-BMICalculator.release.xcconfig"; sourceTree = "<group>"; };
 		5FB011624CCD0005E36D3195 /* Pods_BMICalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMICalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		852438EA2F3EB63F004FB083 /* WHOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHOViewController.swift; sourceTree = "<group>"; };
 		85D172912B6B730D0071CDC9 /* BMICalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMICalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D172942B6B730D0071CDC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85D172962B6B730D0071CDC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				85D172962B6B730D0071CDC9 /* SceneDelegate.swift */,
 				85D172982B6B730D0071CDC9 /* ViewController.swift */,
 				85D1729A2B6B730D0071CDC9 /* Main.storyboard */,
+				852438EA2F3EB63F004FB083 /* WHOViewController.swift */,
 				85D1729D2B6B730D0071CDC9 /* Assets.xcassets */,
 				85D1729F2B6B730D0071CDC9 /* LaunchScreen.storyboard */,
 				85D172A22B6B730D0071CDC9 /* Info.plist */,
@@ -172,9 +175,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BMICalculator/Pods-BMICalculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BMICalculator/Pods-BMICalculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -213,6 +220,7 @@
 				85D172992B6B730D0071CDC9 /* ViewController.swift in Sources */,
 				85D172952B6B730D0071CDC9 /* AppDelegate.swift in Sources */,
 				85D172972B6B730D0071CDC9 /* SceneDelegate.swift in Sources */,
+				852438EB2F3EB63F004FB083 /* WHOViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
